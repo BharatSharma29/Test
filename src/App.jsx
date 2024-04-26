@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getContentList,  increamentLimit } from './features/content/contentSlice'
 
 function App() {
-  // const [data, setData] = useState([])
   const {contentList, isFilter, filterStr, limit} = useSelector((store) => store.content)
   const dispatch = useDispatch()
 
@@ -65,12 +64,6 @@ function App() {
         {
           isFilter ? filterContent() : content() 
         }
-          {/* {
-              contentList.map((obj,i) => {
-                return (
-                  <Content key={i} name={obj.name} image={obj['poster-image']} />
-                )
-              }) */}
         </div>
       </main>
     </div>

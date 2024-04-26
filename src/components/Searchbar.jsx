@@ -33,7 +33,7 @@ export default function Searchbar() {
           src="https://test.create.diagnal.com/images/Back.png" 
           alt="back button" 
         />
-        {/* <h2 className='title'>Romantic dates</h2> */}
+
         <input 
           type="text" 
           id='searchText'
@@ -42,7 +42,7 @@ export default function Searchbar() {
           onChange={handleChange}
           ref={inputRef}
         />
-        {/* <img className='search-bar' src="https://test.create.diagnal.com/images/nav_bar.png" alt="search bar" /> */}
+     
         <img 
           className='search-btn' 
           onClick={searchBtn}  

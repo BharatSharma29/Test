@@ -4,7 +4,6 @@ body{
   color: #FFFFFF;
   margin: 0 0.2em 0.2em 0 ;
   font-weight: 400;
-  /* max-width: 375px; */
 }
 
 /*----------------------------Content---------------------------------------------*/
@@ -22,29 +21,18 @@ main{
 }
 
 .content{
-  /* margin-top: 120px;
-  margin-left: 70px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
-  width: 100%;
-  border: 2px solid blue; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* justify-content: center;
-  align-content: center; */
   grid-gap: 2em;
-  /* margin-top: 10em; */
   border: 2px solid blue;
   width: 100%;
+  height: 100%;
   margin: 0;
-  /* justify-content: space-around; */
 }
 
 h4{
   margin: 0;
   text-align: left;
-  /* width: 40%; */
   font-weight: 300;
 }
 
@@ -53,9 +41,7 @@ img{
 }
 
 .one-show{
-  /* border: 2px solid purple; */
   width: 100%;
-  /* margin: 0.8em 0.4em; */
 }
 
 /*----------------------------Searching---------------------------------------------*/
@@ -85,56 +71,33 @@ img{
 }
 
 .search{
-  /* display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2em;
-  justify-content: center; */
-  /* display: flex;
-  gap: 2em; */
+  justify-content: center;
   
   width: 100%;
   height: 5%;
-  /* min-height: 5vh; */
   position: fixed;
-  /* background-color: black; */
   border: 2px solid violet;
   background-image: url('https://test.create.diagnal.com/images/nav_bar.png');
   background-size: cover;
 }
-
-/* .search-bar{
-  width: 100%;
-  height: 75%;
-  position: absolute;
-  z-index: 1;
-} */
-
-/* .title{
-  position: absolute;
-  text-align: center;
-  z-index: 2;
-  left: 43vw;
-  margin-top: 0px;
-} */
 
 .input-bar {
   width: 80%;
   height: 45%;
   position: absolute;
   z-index: 1;
-  /* width: 100%; */
   color: #FFFFFF;
   background-color: black;
   text-align: left;
   left: 9vw;
   top: 2vh;
-  /* z-index: 2; */
-  /* text-decoration: none; */
   border: none;
   font-size: 1rem;
   border: none;
   outline: none;
-  /* border-bottom: 1px solid #ccc; */
 }
 
 .input-bar:focus{
@@ -143,7 +106,6 @@ img{
 
 .suggestions{
   font-size: 1rem;
-  /* border: 2px solid red; */
   width: 160%;
 }
 
