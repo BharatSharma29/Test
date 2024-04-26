@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setFilter, clearFilter, setFilterStr } from '../features/content/contentSlice'
+import { setFilter, clearFilter, setFilterStr, defaultLimit } from '../features/content/contentSlice'
 
 export default function Searchbar() {
   const dispatch = useDispatch()
@@ -12,12 +12,14 @@ export default function Searchbar() {
   }
 
   function searchBtn() {
+    dispatch(defaultLimit())
     document.getElementById('searchText').value = ''
     dispatch(setFilter())
     inputRef.current.focus()
   }
 
   function backBtn() {
+    dispatch(defaultLimit())
     dispatch(setFilterStr(''))
     dispatch(clearFilter())
     document.getElementById('searchText').value = 'Romantic Comedy'

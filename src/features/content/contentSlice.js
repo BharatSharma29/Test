@@ -4,6 +4,7 @@ const initialState = {
   contentList: [],
   isFilter: false,
   filterStr: "",
+  limit: 9,
 };
 
 export const getContentList = createAsyncThunk("content/getContentList", () => {
@@ -25,6 +26,12 @@ const contentSlice = createSlice({
     setFilterStr: (state, action) => {
       state.filterStr = action.payload;
     },
+    increamentLimit: (state) => {
+      state.limit += 9;
+    },
+    defaultLimit: (state) => {
+      state.limit = 9;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -41,6 +48,12 @@ const contentSlice = createSlice({
   },
 });
 
-export const { setFilter, clearFilter, setFilterStr } = contentSlice.actions;
+export const {
+  setFilter,
+  clearFilter,
+  setFilterStr,
+  increamentLimit,
+  defaultLimit,
+} = contentSlice.actions;
 
 export default contentSlice.reducer;

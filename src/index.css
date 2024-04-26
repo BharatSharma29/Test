@@ -2,7 +2,7 @@ body{
   font-family: "Titillium Web", sans-serif;
   background-color: #171717;
   color: #FFFFFF;
-  margin: 0 0.4em 0.4em 0 ;
+  margin: 0 0.2em 0.2em 0 ;
   font-weight: 400;
   /* max-width: 375px; */
 }
@@ -13,7 +13,8 @@ body{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 4em;
+  border: 2px solid red;
 }
 
 main{
@@ -34,9 +35,9 @@ main{
   align-content: center; */
   grid-gap: 2em;
   /* margin-top: 10em; */
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   width: 100%;
-  margin: 0 0.2em;
+  margin: 0;
   /* justify-content: space-around; */
 }
 
@@ -96,7 +97,7 @@ img{
   /* min-height: 5vh; */
   position: fixed;
   /* background-color: black; */
-  /* border: 2px solid red; */
+  border: 2px solid violet;
   background-image: url('https://test.create.diagnal.com/images/nav_bar.png');
   background-size: cover;
 }
