@@ -1,23 +1,22 @@
-import { useEffect, useState } from 'react'
+import { useEffect, lazy } from 'react'
 import Content from './components/Content'
 import Searchbar from './components/Searchbar'
 import { useSelector, useDispatch } from 'react-redux'
-import { getContentList,  increamentLimit } from './features/content/contentSlice'
+import { getContentList,  increamentLimit, increamentPage } from './features/content/contentSlice'
 
 function App() {
-  const {contentList, isFilter, filterStr, limit} = useSelector((store) => store.content)
+  const {contentList, isFilter, filterStr, limit, pageNo} = useSelector((store) => store.content)
   const dispatch = useDispatch()
 
   function handleScroll() {
     if(window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight){
       dispatch(increamentLimit())
-      console.log("inr")
     }
   }
 
   useEffect(() => {
     dispatch(getContentList())   
-  }, [])
+  }, [pageNo])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -25,6 +24,7 @@ function App() {
   },[])
 
   function filterContent(){
+    console.log("limit filter = "+ limit)
     if(filterStr.length === 0){
       return <div className='suggestions'>Suggestions: <span>The Birds</span></div>
     }
@@ -44,6 +44,10 @@ function App() {
   }
 
   function content(){
+    // console.log("limit = "+ limit)
+    console.log("pageNo = "+ pageNo)
+    if(limit > 18)
+      dispatch(increamentPage())
     return contentList.slice(0, limit).map((obj,i) => {
       return (
         <Content key={i} name={obj.name} image={obj['poster-image']} />

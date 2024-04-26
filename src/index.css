@@ -1,15 +1,19 @@
+#root{
+  margin: 0;
+}
+
 body{
   font-family: "Titillium Web", sans-serif;
   background-color: #171717;
   color: #FFFFFF;
-  margin: 0 0.2em 0.2em 0 ;
+  margin: 0;
   font-weight: 400;
 }
 
 /*----------------------------Content---------------------------------------------*/
 
 .content-list{
-  width: 100%;
+  width: 98%;
   display: flex;
   flex-wrap: wrap;
   gap: 4em;
@@ -38,10 +42,12 @@ h4{
 
 img{
   width: 100%;
+  margin: 0;
 }
 
 .one-show{
   width: 100%;
+  margin: 0;
 }
 
 /*----------------------------Searching---------------------------------------------*/
@@ -53,7 +59,6 @@ img{
 }
 
 .back-btn{
-  margin-right: auto;
   position: absolute;
   z-index: 2;
   width: 1em;
@@ -62,7 +67,6 @@ img{
 }
 
 .search-btn{
-  margin-left: auto;
   position: absolute;
   right: 2.5vw;
   z-index: 2;
@@ -71,12 +75,7 @@ img{
 }
 
 .search{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2em;
-  justify-content: center;
-  
-  width: 100%;
+  width: 93%;
   height: 5%;
   position: fixed;
   border: 2px solid violet;
@@ -93,11 +92,12 @@ img{
   background-color: black;
   text-align: left;
   left: 9vw;
-  top: 2vh;
+  top: 1.5vh;
   border: none;
   font-size: 1rem;
-  border: none;
+  border: 2px solid green;
   outline: none;
+  margin: 0;
 }
 
 .input-bar:focus{
@@ -107,10 +107,12 @@ img{
 .suggestions{
   font-size: 1rem;
   width: 160%;
+  margin: 0;
 }
 
 span{
   font-size: 1rem;
   border: 1px solid rgb(33, 4, 80);
   background-color: rgb(33, 4, 80);;
+  margin: 0;
 }

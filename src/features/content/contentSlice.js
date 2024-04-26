@@ -5,10 +5,13 @@ const initialState = {
   isFilter: false,
   filterStr: "",
   limit: 9,
+  pageNo: 1,
 };
 
 export const getContentList = createAsyncThunk("content/getContentList", () => {
-  return fetch("https://test.create.diagnal.com/data/page1.json")
+  return fetch(
+    `https://test.create.diagnal.com/data/page${initialState.pageNo}.json`
+  )
     .then((res) => res.json())
     .catch((err) => console.log(err));
 });
@@ -32,15 +35,25 @@ const contentSlice = createSlice({
     defaultLimit: (state) => {
       state.limit = 9;
     },
+    increamentPage: (state) => {
+      if (state.pageNo < 3) state.pageNo += 1;
+    },
   },
   extraReducers: (builder) => {
     builder
       .addCase(getContentList.pending, (state) => {
-        console.log("pending = " + state);
+        state.contentList = [...state.contentList];
       })
       .addCase(getContentList.fulfilled, (state, action) => {
-        console.log(action.payload.page["content-items"].content);
-        state.contentList = action.payload.page["content-items"].content;
+        console.log("content-list = " + state.contentList);
+        console.log(
+          "length = " + action.payload.page["content-items"].content.length
+        );
+        state.contentList = [
+          ...state.contentList,
+          ...action.payload.page["content-items"].content,
+        ];
+        console.log("content-list = " + state.contentList);
       })
       .addCase(getContentList.rejected, (state, action) => {
         console.log("rejected = " + action);
@@ -54,6 +67,7 @@ export const {
   setFilterStr,
   increamentLimit,
   defaultLimit,
+  increamentPage,
 } = contentSlice.actions;
 
 export default contentSlice.reducer;
