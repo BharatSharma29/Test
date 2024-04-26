@@ -1,30 +1,26 @@
 import {useRef} from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { setFilter, clearFilter, setFilterStr, defaultLimit } from '../features/content/contentSlice'
+import { useDispatch } from 'react-redux'
+import { setFilter, clearFilter, setFilterStr } from '../features/content/contentSlice'
 
 export default function Searchbar() {
-  const {limit} = useSelector(store => store.content)
-  const dispatch = useDispatch()
-  const inputRef = useRef(null)
+  const dispatch = useDispatch() // dispatching actions
+  const inputRef = useRef(null) // to control the DOMinput element
 
+  /** handling change in input element */
   function handleChange() {
     const str = document.getElementById('searchText').value
     dispatch(setFilterStr(str.toLowerCase()))
   }
 
+  /** search button */
   function searchBtn() {
-    console.log('search before = '+limit);
-    dispatch(defaultLimit())
-    console.log('search after = '+limit);
     document.getElementById('searchText').value = ''
     dispatch(setFilter())
     inputRef.current.focus()
   }
 
+  /** back button */
   function backBtn() {
-    console.log('back before = '+limit);
-    dispatch(defaultLimit())
-    console.log('back after = '+limit);
     dispatch(setFilterStr(''))
     dispatch(clearFilter())
     document.getElementById('searchText').value = 'Romantic Comedy'
