@@ -42,6 +42,8 @@ export default function Searchbar() {
           defaultValue={'Romantic Comedy'}
           onChange={handleChange}
           ref={inputRef}
+          minLength='1'
+          maxLength='50'
         />
      
         <img 

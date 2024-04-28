@@ -49,6 +49,22 @@ img{
   margin: 0;
 }
 
+.suggestions{
+  display: inline-block;
+  font-size: 1rem;
+  width: 160%;
+  margin: 0;
+}
+
+span{
+  display: inline-block;
+  font-size: 1rem;
+  border: 1px solid rgb(33, 4, 80);
+  background-color: rgb(33, 4, 80);;
+  margin: 0;
+}
+
+
 /*----------------------------Searching---------------------------------------------*/
 
 .search{
@@ -95,15 +111,3 @@ img{
   right: 4.5vw;
 }
 
-.suggestions{
-  font-size: 1rem;
-  width: 160%;
-  margin: 0;
-}
-
-span{
-  font-size: 1rem;
-  border: 1px solid rgb(33, 4, 80);
-  background-color: rgb(33, 4, 80);;
-  margin: 0;
-}
