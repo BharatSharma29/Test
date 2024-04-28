@@ -1,4 +1,3 @@
-import React from 'react'
 
 /** Component to show individual content */
 export default function Content({name, image}) {
