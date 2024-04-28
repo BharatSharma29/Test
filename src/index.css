@@ -55,8 +55,7 @@ img{
   margin: 0;
 }
 
-span{
-  display: inline-block;
+.list{
   font-size: 1rem;
   border: 1px solid rgb(33, 4, 80);
   background-color: rgb(33, 4, 80);;
