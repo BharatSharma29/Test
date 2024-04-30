@@ -38,15 +38,15 @@ main{
   margin: 0;
   text-align: left;
   font-weight: 300;
-  text-overflow: ellipsis;
+  width: 5.6rem;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .img{
   width: 100%;
   margin: 0;
-  height: 100%;
-  border: none;
 }
 
 .one-show{

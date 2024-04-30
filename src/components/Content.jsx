@@ -8,8 +8,9 @@ export default function Content({name, image}) {
     image = 'placeholder_for_missing_posters.png'
   }
 
+  // Lazy loding the image
   return (
-    <div className='one-show'>
+    <div className='one-show'> 
         <LazyLoadImage 
           className='img'
           src={`https://test.create.diagnal.com/images/${image}`}  
@@ -17,7 +18,7 @@ export default function Content({name, image}) {
           placeholderSrc='https://test.create.diagnal.com/images/placeholder_for_missing_posters.png'
           effect='blur'
         />
-        <h4 className='title'>{name}</h4>
+        <h4 className='title' title={name}>{name}</h4>
     </div>
   )
 }
