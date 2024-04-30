@@ -46,7 +46,7 @@ function App() {
   /** Filtering content based on the input string from the user */
   function filterContent(){
     if(filterStr.length === 0){
-      return <div className='suggestions'>Suggestions: <span>The Birds</span></div>
+      return <div className='suggestions'>Suggestions: <span className='list'>The Birds</span></div>
     }
     const filterContent = contentList.filter(obj => obj.name.toLowerCase().includes(filterStr))
     return filterContent.map((obj,i) => {

@@ -1,3 +1,5 @@
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+
 
 /** Component to show individual content */
 export default function Content({name, image}) {
@@ -8,8 +10,14 @@ export default function Content({name, image}) {
 
   return (
     <div className='one-show'>
-        <img src={`https://test.create.diagnal.com/images/${image}`} alt="poster image" />
-        <h4>{name}</h4>
+        <LazyLoadImage 
+          className='img'
+          src={`https://test.create.diagnal.com/images/${image}`}  
+          alt="poster image" 
+          placeholderSrc='https://test.create.diagnal.com/images/placeholder_for_missing_posters.png'
+          effect='blur'
+        />
+        <h4 className='title'>{name}</h4>
     </div>
   )
 }

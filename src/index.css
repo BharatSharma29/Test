@@ -4,9 +4,9 @@
 
 body{
   font-family: "Titillium Web", sans-serif;
-  background-color: black;
+  background-color: #171717;
   color: #FFFFFF;
-  margin: 0 0.5em;
+  margin: 0;
   font-weight: 400;
 }
 
@@ -27,21 +27,26 @@ main{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2em;
-  width: 100%;
+  width: 92%;
   height: 100%;
   margin: 0;
   background-color: #171717;
+  padding: 0 4%;
 }
 
-h4{
+.title{
   margin: 0;
   text-align: left;
   font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-img{
+.img{
   width: 100%;
   margin: 0;
+  height: 100%;
+  border: none;
 }
 
 .one-show{
@@ -55,7 +60,7 @@ img{
   margin: 0;
 }
 
-span{
+.list{
   font-size: 1rem;
   border: 1px solid rgb(33, 4, 80);
   background-color: rgb(33, 4, 80);;
@@ -81,7 +86,7 @@ span{
   color: #FFFFFF;
   background-color: black;
   text-align: left;
-  left: 9vw;
+  left: 12vw;
   top: 1.7vh;
   border: none;
   font-size: 1rem;
@@ -102,10 +107,10 @@ span{
 }
 
 .back-btn{
-  left: 1vw;
+  left: 4.5vw;
 }
 
 .search-btn{
-  right: 4.5vw;
+  right: 5vw;
 }
 
