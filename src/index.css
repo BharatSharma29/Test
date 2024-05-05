@@ -56,7 +56,6 @@ main{
 
 .suggestions{
   font-size: 1rem;
-  width: 160%;
   margin: 0;
   white-space: nowrap;
 }
@@ -70,7 +69,6 @@ main{
 
 .not-found{
   font-size: 1rem;
-  /* width: 160%; */
   margin-top: 5em;
   margin-left: -3.5em;
   white-space: nowrap;
