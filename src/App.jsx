@@ -49,6 +49,10 @@ function App() {
       return <div className='suggestions'>Suggestions: <span className='list'>The Birds</span></div>
     }
     const filterContent = contentList.filter(obj => obj.name.toLowerCase().includes(filterStr))
+    if(filterContent.length === 0){
+      return <div className='not-found'>No results found</div>
+    }
+
     return filterContent.map((obj,i) => {
       return (
         <Content key={i} name={obj.name} image={obj['poster-image']} />

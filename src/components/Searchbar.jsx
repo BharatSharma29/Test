@@ -14,16 +14,20 @@ export default function Searchbar() {
 
   /** search button */
   function searchBtn() {
-    document.getElementById('searchText').value = ''
+    let inputText = document.getElementById('searchText')
+    inputText.value = ''
+    inputText.disabled = false
     dispatch(setFilter())
     inputRef.current.focus()
   }
 
   /** back button */
   function backBtn() {
+    let inputText = document.getElementById('searchText')
     dispatch(setFilterStr(''))
     dispatch(clearFilter())
-    document.getElementById('searchText').value = 'Romantic Comedy'
+    inputText.value = 'Romantic Comedy'
+    inputText.disabled = true
   }
   
   return (
@@ -43,7 +47,8 @@ export default function Searchbar() {
           onChange={handleChange}
           ref={inputRef}
           minLength='1'
-          maxLength='50'
+          maxLength='15'
+          disabled={true}
         />
      
         <img 
